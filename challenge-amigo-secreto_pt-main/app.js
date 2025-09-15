@@ -2,7 +2,7 @@
 let amigos = [];
 let sorteados = [];
 
-// Adiciona nome na lista
+
 function adicionarAmigo() {
     const input = document.getElementById("amigo");
     const nome = input.value.trim();
@@ -17,7 +17,7 @@ function adicionarAmigo() {
     input.value = "";
 }
 
-// Mostra a lista de nomes na tela
+
 function mostrarLista() {
     const lista = document.getElementById("listaAmigos");
     lista.innerHTML = "";
@@ -29,14 +29,14 @@ function mostrarLista() {
     });
 }
 
-// Sorteia sem repetir
+
 function sortearAmigo() {
     if (amigos.length === 0) {
         alert("Adicione nomes primeiro!");
         return;
     }
 
-    // Verifica se já sorteou todos
+    
     if (sorteados.length === amigos.length) {
         alert("Todos os amigos já foram sorteados! ");
         sorteados = [];
@@ -46,7 +46,7 @@ function sortearAmigo() {
 
     let sorteado;
 
-    // Garante que não repita
+    
     do {
         sorteado = amigos[Math.floor(Math.random() * amigos.length)];
     } while (sorteados.includes(sorteado));
